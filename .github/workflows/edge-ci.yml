@@ -115,6 +115,6 @@ jobs:
           GIT_REVISION: ${{ needs.assemble-deephaven-core.outputs.git-revision }}
           DEEPHAVEN_CORE_WHEEL: ${{ steps.artifact_metadata.outputs.deephaven_core_wheel }}
           MULTI_ARCH: true
-          RELEASE: ${{ github.event_name != 'pull_request' }}
+          RELEASE: false
           REPO_PREFIX: ghcr.io/${{ github.repository_owner }}/
           TAG: edge
